@@ -1,0 +1,360 @@
+body {
+  background-color: rgb(51, 177, 124);
+  font-family: 'Roboto', sans-serif;
+  background-image: url("../img/game-bg.png");
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.greeting-display {
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.5s;
+}
+
+.greeting-display {
+  font-size: 36px;
+  font-weight: 400;
+  font-family: "Orbitron", sans-serif;
+  margin: 36px 0 18px 0;
+}
+
+.game {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+table {
+  padding: 18px 18px 12px 18px;
+}
+
+.table-bg {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px 0 0 4px;
+}
+
+td.cell {
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  color: black;
+  padding: 3px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* ////// stat display */
+
+.control-panel {
+  position: relative;
+  min-width: 280px;
+  color: #fff;
+  background-color: rgba(6, 9, 26, 0.842);
+  border-radius: 0 4px 4px 0;
+  padding: 18px 18px;
+  transition: opacity 0.3s;
+}
+
+.player-name h2 {
+  display: inline-block;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  font-weight: 400;
+  font-size: 32px;
+  font-family: "Orbitron", sans-serif;
+}
+
+.player-name:hover {
+  color: rgb(15, 154, 224);
+}
+
+.triangle {
+  font-size: 12px;
+  position: relative;
+  top: -4px;
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+
+/* radio Buttons // */
+
+input[type="text"] {
+  position: absolute;
+  opacity: 0;
+  display: none;
+  top: 24px;
+  right: 22px;
+  /* opacity: 0;
+  display: none; */
+  height: 36px;
+  border-radius: 4px;
+  width: 260px;
+  padding: 0 6px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 24px;
+  color: rgb(9, 5, 66);
+  transition: 0.4s all;
+}
+
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+label {
+  font-weight: 200;
+  margin-right: 16px;
+  color: white;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #999;
+  transition: 0.2s all;
+  outline: none;
+  margin-right: 2px;
+  margin-left: 0;
+  position: relative;
+  top: 2px;
+}
+
+input[type="radio"]:checked {
+  border: 6px solid rgb(15, 154, 224)
+}
+
+/* Game Stats */
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #fff;
+  margin-bottom: 18px
+}
+
+.stats h4 {
+  display: inline;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 12px 0 0 0;
+}
+
+.stats span {
+  font-size: 36px;
+  font-family: "Orbitron", sans-serif;
+  margin-left: 24px;
+}
+
+.stats .timer-digits {
+  position: relative;
+  left: 10px;
+}
+
+/* Leaderbord  */
+
+.leaderboard {
+  opacity: 0;
+  position: relative;
+}
+
+.leaderboard h4 {
+  color: white;
+  font-weight: 300;
+  font-size: 16px;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  margin-top: 32px;
+  margin-bottom: 6px;
+}
+
+
+ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+  padding: 6px 18px 0px 18px;
+  margin: 0;
+
+}
+
+.new-record {
+  color: rgb(255, 230, 0)
+}
+
+.play-again-button {
+  float: right;
+  position: relative;
+  bottom: 16px;
+  text-align: right;
+}
+
+i {
+  cursor: pointer;
+  font-size: 32px;
+  color: rgb(15, 154, 224);
+}
+
+i:hover {
+  color: white;
+}
+
+.notice {
+  color: white;
+  text-align: center;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .button {
+  padding:4px 12px;
+  background: linear-gradient(to bottom, #1f9cdb 5%, #2185b7 100%);
+  background-color: #1f9cdb;
+  border-radius: 3px;
+  border: 1px solid #1884c7;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #5b6178;
+}
+
+.button:hover {
+
+  background: linear-gradient(to bottom, #2185b7 5%, #1f9cdb 100%);
+  background-color: #2185b7;
+}
+
+.button:active {
+  position: relative;
+  top: 1px;
+}
+
+.button.selected {
+
+  background: linear-gradient(to bottom, #1f2852 5%, #263b99 100%);
+  background-color: #1f2852;
+  border-radius: 3px;
+  border: 1px solid #091f61;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 5px 16px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #5b6178;
+} */
+
+
+/* 
+/* ///// Modal 
+.game-over {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  width: 200px;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  padding-top: 0px;
+  background-color: #fff;
+  color: black;
+  box-shadow: 5px 10px 13px 3px rgba(0, 0, 0, 0.41);
+  transition: opacity 0.4s;
+} */
+
+
+/* Modal */
+
+/* 
+.close-button {
+  float: right;
+  text-align: center;
+  vertical-align: center;
+  margin-right: -10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.close-button p {
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+}
+
+.close-button p:hover {
+  color: #1884c7
+}
+
+.game-over h3,
+p,
+h4 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 0px;
+}
+
+.game-over h3 {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Orbitron", sans-serif;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+
+.game-over input {
+  margin-top: 40px;
+  float: right;
+}
+
+.game-over.close-button {
+  cursor: pointer;
+}
+ */

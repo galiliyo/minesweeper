@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MineSweep Yonatan Galili v1.1</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700|Roboto:300,400,500&display=swap" rel="stylesheet">
+  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  </head>
+
+  <body onload="init()">
+    <div class="container">
+        <div class ="greeting-display">
+            <h3>You Won!</h3>
+            </div>
+      <div class="game">
+        <div class="table-bg">
+          <table class="board">
+            <tbody></tbody>
+          </table>
+        </div>
+
+        <div class="control-panel">
+          <div class="player-name" onclick="showPlayerNameInput()"><h2>
+            Your Name
+          </h2><span class="triangle">&#9660;</span></div>
+          
+          <input type="text" id="name" name="name" required
+       minlength="2" maxlength="12" placeholder="Your Name" onblur="setPlayerName(this)">
+
+          <form>
+            <fieldset class = "level-radio-buttons">
+            
+                <input
+                  type="radio"
+                  id="easy"
+                  name="contact"
+                  value="1"
+                  onchange="radioBtnLevel(this)"
+                />
+                <label for="easy">Easy</label>
+
+                <input
+                  type="radio"
+                  id="medium"
+                  name="contact"
+                  value="2"
+                  onchange="radioBtnLevel(this)"
+                  checked
+                />
+                <label for="medium">Medium</label>
+
+                <input
+                  type="radio"
+                  id="hard"
+                  name="contact"
+                  value="3"
+                  onchange="radioBtnLevel(this)"
+                />
+                <label for="hard">Hard</label>
+             
+            </fieldset>
+          </form>
+
+          <div class="lives"></div>
+          <div class="stats">
+            <div class="timer-display">
+              <h4>Time<span class="timer-digits">00</span></h4>
+            </div>
+            <div class ="mines-display">
+              <h4>Mines<span class="mines_marked">0</span></h4>
+              </div>
+          </div>
+
+          <div class="leaderboard">
+           <h4> Best Scores - Level <span class="leaderboard-title-level">2</span></h4>
+            <div class="leaderboard-content">
+              <ol>
+              </ol>
+            </div>  
+          </div>
+          <div class="play-again-button " onclick="resetGame()"><i class="material-icons">
+            autorenew
+            </i></div>                 
+          </div>
+        </div>
+        <p class="notice">if you feel like cheating - open the console 😉</p>>
+      </div>
+    </div>
+    <script src="js/minesweep.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/records.js"></script>
+  </body>
+</html>
